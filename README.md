@@ -1,4 +1,4 @@
-# Dab-recipes
+# DAB-recipes
 DAB recipes to install ODR-Dab and related tools with PyBOMBS
 
 The ODR-Dab suite looked awkward to install by hand and PyBOMBS
@@ -6,3 +6,9 @@ The ODR-Dab suite looked awkward to install by hand and PyBOMBS
 
 Also PyBOMBS provides UHD and rtl-sdr which is most convient,
  as UHD provides TX and rtl-sdr RX
+
+# Todo
+- Dependencies are not properly mapped
+- Dependencies are already fulfilled and therefore reliant on gnuradio-default
+- Make a dab-default for these recipes
+- Usage instructions
