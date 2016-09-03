@@ -1,0 +1,10 @@
+category: dab
+description: DAB/DAB+ receiver for Linux (including ETI-NI playback)
+gitbranch: master
+depends:
+- ka9q-fec
+- sdl2
+- libmpg123
+- libfaad
+inherit: cmake
+source: git+https://github.com/Opendigitalradio/dablin.git

@@ -1,0 +1,5 @@
+category: dab
+description: This is a fork of KA9Q's FEC library that also compiles on x86_64 and arm
+gitbranch: master
+inherit: cmake
+source: git+https://github.com/Opendigitalradio/ka9q-fec.git
