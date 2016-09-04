@@ -1,11 +1,11 @@
 # DAB-recipes
 DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with PyBOMBS
 
-The ODR-Dab suite was awkward to install by hand and PyBOMBS seemed to be doing most of the SDR related buildchain work.
+The ODR-Dab suite was awkward to compile by hand and PyBOMBS seemed to be doing most of the SDR related buildchain work.
 
-Also PyBOMBS provides/compiles UHD and rtl-sdr which is most convient, as UHD provides TX and rtl-sdr RX.
+Also PyBOMBS compiles UHD and rtl-sdr which is most convient, as UHD provides TX and rtl-sdr RX.
 
-This repo provides a less involved way of building some of the following applications:
+This repo provides a less involved way of compiling the following applications, so far:
 
 - [odr-dabmux](https://github.com/Opendigitalradio/ODR-DabMux)
 - [odr-dabmod](https://github.com/Opendigitalradio/ODR-DabMod)
