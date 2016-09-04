@@ -1,5 +1,5 @@
 # DAB-recipes
-DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with PyBOMBS
+DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with [PyBOMBS (Python Build Overlay Managed Bundle System)](https://github.com/gnuradio/pybombs)
 
 The ODR-Dab suite was awkward to compile by hand and PyBOMBS seemed to be doing most of the SDR related buildchain work.
 
