@@ -14,6 +14,7 @@ This repo provides a less involved way of compiling the following applications, 
 - [dablin](https://github.com/Opendigitalradio/dablin)
 - [fdk-aac-dabplus](https://github.com/Opendigitalradio/fdk-aac-dabplus)
 - [ka9q-fec](https://github.com/Opendigitalradio/ka9q-fec)
+- [eti-tools](https://github.com/piratfm/eti-tools)
 
 Follow [INSTALL.md](INSTALL.md) for installation guide.
 
@@ -32,6 +33,9 @@ For ongoing usage:
     odr-dabmod
     dabplus-enc
     dablin
+    na2ni -h
+    ni2http -h
+    ts2na -h
     ########## Example ##########
 
 # Questions
