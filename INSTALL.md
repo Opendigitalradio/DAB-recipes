@@ -8,7 +8,7 @@ You can skip installing `-R gnuradio-default` if you only want the DAB tools whi
     pybombs recipes add dab-recipes git+https://github.com/DavidLutton/DAB-recipes.git
 
     pybombs prefix init /path/to/prefix -a myprefix  # -R gnuradio-default
-    pybombs install odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus
+    pybombs install odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
 
     cd /path/to/prefix
     . ./setup_env.sh
@@ -26,3 +26,6 @@ You can skip installing `-R gnuradio-default` if you only want the DAB tools whi
     odr-dabmod
     dabplus-enc
     dablin
+    na2ni -h
+    ni2http -h
+    ts2na -h
