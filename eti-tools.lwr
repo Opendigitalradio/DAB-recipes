@@ -1,0 +1,12 @@
+category: dab
+description: ETI conversion software
+gitbranch: master
+depends:
+- ka9q-fec
+- zeromq
+configure: sed -i '/CFLAGS+=/s/^#//g' Makefile ; sed -i '/FEC_LDFLAGS:=/s/^#//g' Makefile  ; sed -i '/ZMQ_LDFLAGS:=/s/^#//g' Makefile ; sed -e 's,CFLAGS=-O2 -I.,CFLAGS=-O2 -I. -I$prefix/include/,g' -i Makefile
+inherit: autoconf
+source: git+https://github.com/piratfm/eti-tools.git
+make: CFLAGS="-I$prefix/include" make
+install: cp na2ni $prefix/bin/. ; cp ni2http $prefix/bin/. ; cp ni2http $prefix/bin/.
+uninstall: rm -rf $prefix/bin/na2ni $prefix/bin/na2http $prefix/bin/ni2http
