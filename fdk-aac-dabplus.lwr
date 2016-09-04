@@ -3,4 +3,6 @@ description: A DAB and DAB+ encoder based on toolame and the Fraunhofer FDK AAC 
 gitbranch: master
 configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx
 inherit: autoconf
+depends:
+- zeromq
 source: git+https://github.com/Opendigitalradio/fdk-aac-dabplus.git

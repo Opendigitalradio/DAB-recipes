@@ -9,6 +9,6 @@ Also PyBOMBS provides UHD and rtl-sdr which is most convient,
 
 # Todo
 - Dependencies are not properly mapped
-- Dependencies are already fulfilled and therefore reliant on gnuradio-default
-- Make a dab-default for these recipes
+- Dependencies are already fulfilled by gnuradio-default, not mapped
+- Make a dab-default for these recipes \# How?
 - Usage instructions

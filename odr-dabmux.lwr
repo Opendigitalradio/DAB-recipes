@@ -2,7 +2,7 @@ category: dab
 description: ODR-DabMux is a DAB (Digital Audio Broadcasting) multiplexer
 gitbranch: master
 depends:
-- autotools-bootstrap
+- zeromq
 - ka9q-fec
 configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx
 inherit: autoconf

@@ -1,7 +1,9 @@
 category: dab
 description:  DAB/DAB+ software for RTL-SDR dongles and the Psion Wavefinder including ETI stream recording
 gitbranch: master
-# depends:
+depends:
+- rtl-sdr
+
 # configure: cd src
 # inherit: autoconf
 make: cd ../src ; export LD_LIBRARY_PATH=$prefix/lib/:$prefix/lib64/ ;  make
