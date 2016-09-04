@@ -13,13 +13,9 @@ You can skip installing `-R gnuradio-default` if you only want the DAB tools whi
     cd /path/to/prefix
     . ./setup_env.sh
 
+    # Copy udev SDR.rules and reload udev
     sudo cp -v src/rtl-sdr/rtl-sdr.rules /etc/udev/rules.d/.
     sudo cp -v src/uhd/host/utils/uhd-usrp.rules /etc/udev/rules.d/. 
-    sudo udevadm control --reload
-
-    # copy udev .rules and reload udev
-    sudo cp -v /path/to/prefix/src/rtl-sdr/rtl-sdr.rules  /etc/udev/rules.d/.
-    sudo cp -v /path/to/prefix/src/uhd/host/utils/uhd-usrp.rules  /etc/udev/rules.d/. 
     sudo udevadm control --reload
 
     # Check that the programs execute - if you want to
@@ -30,6 +26,3 @@ You can skip installing `-R gnuradio-default` if you only want the DAB tools whi
     odr-dabmod
     dabplus-enc
     dablin
-
-    # Test the programs function correctly
-    ...
