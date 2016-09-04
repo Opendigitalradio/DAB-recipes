@@ -8,5 +8,5 @@ configure: sed -i '/CFLAGS+=/s/^#//g' Makefile ; sed -i '/FEC_LDFLAGS:=/s/^#//g'
 inherit: autoconf
 source: git+https://github.com/piratfm/eti-tools.git
 make: CFLAGS="-I$prefix/include" make
-install: cp na2ni $prefix/bin/. ; cp ni2http $prefix/bin/. ; cp ni2http $prefix/bin/.
-uninstall: rm -rf $prefix/bin/na2ni $prefix/bin/na2http $prefix/bin/ni2http
+install: cp na2ni $prefix/bin/. ; cp ts2na $prefix/bin/. ; cp ni2http $prefix/bin/.
+uninstall: rm -rf $prefix/bin/na2ni $prefix/bin/ns2na $prefix/bin/ni2http
