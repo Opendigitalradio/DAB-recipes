@@ -5,6 +5,6 @@ depends:
 - ka9q-fec
 - sdl2
 - libmpg123
-- libfaad
+- faad
 inherit: cmake
 source: git+https://github.com/Opendigitalradio/dablin.git

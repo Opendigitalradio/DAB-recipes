@@ -5,7 +5,7 @@ depends:
 - zeromq
 - ka9q-fec
 - boost
-- curl
+- curl-openssl-dev
 configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx
 inherit: autoconf
 source: git+https://github.com/Opendigitalradio/ODR-DabMux.git
