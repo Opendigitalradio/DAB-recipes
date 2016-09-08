@@ -1,11 +1,11 @@
 # DAB-recipes
 DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with [PyBOMBS (Python Build Overlay Managed Bundle System)](https://github.com/gnuradio/pybombs)
 
-The ODR-Dab suite was awkward to compile by hand and PyBOMBS seemed to be doing most of the SDR related buildchain work.
+The ODR-DAB suite was awkward to compile or rebuild by hand and PyBOMBS seemed to be capable of doing the required buildchain work.
 
-Also PyBOMBS compiles UHD and rtl-sdr which is most convenient, as UHD provides TX and rtl-sdr RX.
+In addition PyBOMBS compiles UHD for which is used by odr-dabmod and rtl-sdr by dabtools.
 
-This repo provides a less involved way of compiling the following applications, so far:
+This repo provides a less manual way of compiling the following applications, so far:
 
 - [odr-dabmux](https://github.com/Opendigitalradio/ODR-DabMux)
 - [odr-dabmod](https://github.com/Opendigitalradio/ODR-DabMod)
@@ -21,10 +21,10 @@ Follow [INSTALL.md](INSTALL.md) for installation guide.
 For ongoing usage:
 
     cd /path/to/prefix
-    . ./setup_env.sh
+    . ./setup_env.sh  # To use the tools that have been built
+
     # Invoke the programs as you need.
-    
-    
+
     ########## Example ##########
     etisnoop -h
     dab2eti -h
@@ -38,13 +38,11 @@ For ongoing usage:
     ts2na -h
     ########## Example ##########
 
-# Questions
-- [ ] Does ODR project want the decode/demod repos added?
-- [ ] Does ODR project want the data repos added?
-- [ ] Make a dab-default for these recipes. How?
 
-# Todo
-- [x] Dependencies are not properly mapped
-- [x] Dependencies are already fulfilled by gnuradio-default, not mapped
-- [x] Usage instructions
-- [ ] Test these builds
+Rebuild is also simple:
+
+    # Refetch the repo  ## Optionaly you could edit source locally and then rebuild
+    pybombs refetch odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
+    pybombs rebuild odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
+
+    # Source is stored in: /path/to/prefix/src/REPO/
