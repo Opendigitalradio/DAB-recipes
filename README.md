@@ -1,7 +1,7 @@
 # DAB-recipes
-DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with [PyBOMBS (Python Build Overlay Managed Bundle System)](https://github.com/gnuradio/pybombs)
+DAB recipes to install [Opendigitalradio](https://github.com/Opendigitalradio) and related tools with [PyBOMBS](https://github.com/gnuradio/pybombs) (Python Build Overlay Managed Bundle System)
 
-The ODR-DAB suite was awkward to compile or rebuild by hand and PyBOMBS seemed to be capable of doing the required buildchain work.
+The ODR suite was awkward to compile or rebuild by hand and PyBOMBS seemed to be capable of doing the required buildchain work.
 
 In addition PyBOMBS compiles UHD for which is used by odr-dabmod and rtl-sdr by dabtools.
 
@@ -16,8 +16,10 @@ This repo provides a less manual way of compiling the following applications, so
 - [ka9q-fec](https://github.com/Opendigitalradio/ka9q-fec)
 - [eti-tools](https://github.com/piratfm/eti-tools)
 
+## Install
 Follow [INSTALL.md](INSTALL.md) for installation guide.
 
+## Usage
 For ongoing usage:
 
     cd /path/to/prefix
@@ -38,11 +40,15 @@ For ongoing usage:
     ts2na -h
     ########## Example ##########
 
+## Rebuild
+Refetch the repo from source location
 
-Rebuild is also simple:
+    pybombs refetch odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools ka9q-fec
+    pybombs rebuild odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools ka9q-fec
+Optionaly you could edit source locally and then rebuild  
+Source is stored in: /path/to/prefix/src/REPO/
 
-    # Refetch the repo  ## Optionaly you could edit source locally and then rebuild
-    pybombs refetch odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
-    pybombs rebuild odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
+## New recipes development
+You can select a git branch to get recipes from.
 
-    # Source is stored in: /path/to/prefix/src/REPO/
+    pybombs recipes add libdab git+https://github.com/Opendigitalradio/DAB-recipes.git@libdab
