@@ -1,11 +1,11 @@
-Install [Debian](https://www.debian.org/distrib/netinst) or [Ubuntu](http://www.ubuntu.com/download/server), then this document will guide you through installing [PyBOMBS (Python Build Overlay Managed Bundle System)](https://github.com/gnuradio/pybombs) and then DAB-recipes.
+Install [Debian](https://www.debian.org/distrib/netinst) or [Ubuntu](http://www.ubuntu.com/download/server), then this document will guide you through installing [PyBOMBS](https://github.com/gnuradio/pybombs) (Python Build Overlay Managed Bundle System) and then DAB-recipes.
 
     apt-get install sudo python-pip
     pip install PyBOMBS
 
     pybombs recipes add gr-recipes git+https://github.com/gnuradio/gr-recipes.git
     pybombs recipes add gr-etcetera git+https://github.com/gnuradio/gr-etcetera.git
-    pybombs recipes add dab-recipes git+https://github.com/DavidLutton/DAB-recipes.git
+    pybombs recipes add dab-recipes git+https://github.com/Opendigitalradio/DAB-recipes.git
     pybombs prefix init /path/to/prefix -a dab
 
     # This will take some time, with UHD mostly and will also install system packages like libboost, libmpg123
