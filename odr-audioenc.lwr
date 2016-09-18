@@ -1,0 +1,10 @@
+category: dab
+description: DAB and DAB+ audio encoder
+gitbranch: master
+depends:
+- libmagickwand
+- fdk-aac
+- zeromq
+configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx --enable-vlc
+inherit: autoconf
+source: git+https://github.com/Opendigitalradio/ODR-audioenc.git
