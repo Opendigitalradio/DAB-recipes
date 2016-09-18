@@ -9,10 +9,12 @@ This repo provides a less manual way of compiling the following applications, so
 
 - [odr-dabmux](https://github.com/Opendigitalradio/ODR-DabMux)
 - [odr-dabmod](https://github.com/Opendigitalradio/ODR-DabMod)
+- [odr-audioenc](https://github.com/Opendigitalradio/ODR-audioenc)
+- [odr-padenc](https://github.com/Opendigitalradio/ODR-PadEnc)
 - [etisnoop](https://github.com/Opendigitalradio/etisnoop)
 - [dabtools](https://github.com/linuxstb/dabtools)
 - [dablin](https://github.com/Opendigitalradio/dablin)
-- [fdk-aac-dabplus](https://github.com/Opendigitalradio/fdk-aac-dabplus)
+- [fdk-aac](https://github.com/Opendigitalradio/fdk-aac)
 - [ka9q-fec](https://github.com/Opendigitalradio/ka9q-fec)
 - [eti-tools](https://github.com/piratfm/eti-tools)
 
@@ -27,11 +29,12 @@ For ongoing usage:
 
     ########## Example ##########
     etisnoop -h
-    dab2eti -h
-    eti2mpa
     odr-dabmux -h
     odr-dabmod
-    dabplus-enc
+    odr-audioenc
+    odr-padenc
+    dab2eti -h
+    eti2mpa
     dablin
     na2ni -h
     ni2http -h
@@ -41,8 +44,11 @@ For ongoing usage:
 
 Rebuild is also simple:
 
-    # Refetch the repo  ## Optionaly you could edit source locally and then rebuild
-    pybombs refetch odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
-    pybombs rebuild odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
+    # Refetch the repo
+    list="odr-dabmux odr-dabmod odr-audioenc odr-padenc etisnoop dabtools dablin fdk-aac ka9q-fec eti-tools"
+    pybombs refetch $list
+    # You can also edit source locally and then rebuild
+    pybombs rebuild $list
 
-    # Source is stored in: /path/to/prefix/src/REPO/
+Source are stored in: /path/to/prefix/src/REPO/
+Recipes are stored in: ~/.pybombs/recipes/dab-recipes/

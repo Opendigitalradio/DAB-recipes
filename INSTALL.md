@@ -10,8 +10,9 @@ Install [Debian](https://www.debian.org/distrib/netinst) or [Ubuntu](http://www.
 
     # This will take some time, with UHD mostly and will also install system packages like libboost, libmpg123
     # You can skip any recipes that you do not need.
-    
-    pybombs install odr-dabmux odr-dabmod etisnoop dabtools dablin fdk-aac-dabplus eti-tools
+
+    list="odr-dabmux odr-dabmod odr-audioenc odr-padenc etisnoop dabtools dablin fdk-aac ka9q-fec eti-tools"
+    pybombs install $list
 
     # Copy udev SDR.rules and reload udev
     sudo cp -v /path/to/prefix/src/rtl-sdr/rtl-sdr.rules /etc/udev/rules.d/.
