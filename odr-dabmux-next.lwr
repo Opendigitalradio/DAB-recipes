@@ -3,7 +3,6 @@ description: ODR-DabMux is a DAB (Digital Audio Broadcasting) multiplexer
 gitbranch: next
 depends:
 - zeromq
-- ka9q-fec
 - boost
 - curl-openssl-dev
 configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx
