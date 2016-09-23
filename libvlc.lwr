@@ -1,3 +1,5 @@
 category: baseline
 satisfy:
   deb: libvlc-dev
+  rpm: vlc-devel
+  pkgconfig: libvlc

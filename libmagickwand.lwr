@@ -1,3 +1,5 @@
 category: baseline
 satisfy:
   deb: libmagickwand-dev
+  rpm: ImageMagick-devel
+  pkgconfig: MagickWand
