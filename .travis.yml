@@ -1,0 +1,8 @@
+language: c
+sudo: required
+dist: trusty
+before_install:
+- sudo apt-get update && sudo apt-get install -y --no-install-recommends python-pip
+- pip install --upgrade pip
+- pip install --upgrade PyBOMBS
+script: ./.travis-build.sh
