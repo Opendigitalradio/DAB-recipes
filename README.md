@@ -70,6 +70,7 @@ For ongoing usage:
 ## Rebuild
     # Refetch the repo from source location
     list="odr-dabmux odr-dabmod odr-audioenc odr-padenc etisnoop dabtools dablin fdk-aac ka9q-fec eti-tools"
+    pybombs recipes update
     pybombs refetch $list
     # You can edit source locally and then rebuild when developing
     pybombs rebuild $list
