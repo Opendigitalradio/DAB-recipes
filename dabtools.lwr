@@ -4,6 +4,6 @@ gitbranch: master
 depends:
 - rtl-sdr
 
-make: cd ../src ; export LD_LIBRARY_PATH=$prefix/lib/:$prefix/lib64/ LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ;  make
+make: cd ../src ; export LD_LIBRARY_PATH=$prefix/lib/:$prefix/lib64/ LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ; LD_LIBRARY_PATH=/opt/dab/lib/:/opt/dab/lib64/ LDFLAGS="-L/opt/dab/lib"  CFLAGS="-I/opt/dab/include" CXXFLAGS="-I/opt/dab/include" make
 install : cd ../src ; cp dab2eti $prefix/bin/. ; cp eti2mpa $prefix/bin/.
 source: git+https://github.com/linuxstb/dabtools.git
