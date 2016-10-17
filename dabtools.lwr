@@ -3,7 +3,7 @@ description:  DAB/DAB+ software for RTL-SDR dongles and the Psion Wavefinder inc
 gitbranch: master
 depends:
 - rtl-sdr
-
+- fftw
 make: cd ../src ; export LD_LIBRARY_PATH=$prefix/lib/:$prefix/lib64/:$LD_LIBRARY_PATH  LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ;  make
 install : cd ../src ; cp dab2eti $prefix/bin/. ; cp eti2mpa $prefix/bin/.
 source: git+https://github.com/linuxstb/dabtools.git
