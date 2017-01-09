@@ -1,8 +1,8 @@
 category: dab
 description: Opendigitalradio Programme Associated Data encoder
 gitbranch: master
-depends: 
+depends:
 - libmagickwand
-configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$cc CXX=$cxx
+configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$CC CXX=$CXX
 inherit: autoconf
 source: git+https://github.com/Opendigitalradio/ODR-PadEnc.git
