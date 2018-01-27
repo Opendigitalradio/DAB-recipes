@@ -1,0 +1,8 @@
+category: dab
+description:  A tool to interconnect third-party audio encoders with ODR-DabMux
+depends:
+- zeromq
+gitbranch: master
+configure: LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" autoreconf -i ; LDFLAGS="-L$prefix/lib"  CFLAGS="-I$prefix/include" CXXFLAGS="-I$prefix/include" ./configure --prefix=$prefix $config_opt CC=$CC CXX=$CXX
+inherit: autoconf
+source: git+https://github.com/Opendigitalradio/ODR-SourceCompanion.git
